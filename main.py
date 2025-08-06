@@ -133,4 +133,4 @@ columns = {
 with open("columns.json","w") as f:
     f.write(json.dumps(columns))
 
-print(predictedPrice)
+#print(predictedPrice)
