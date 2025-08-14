@@ -11,6 +11,23 @@ def get_location_names():
 
     return response
 
+
+@app.route('/predict_home_price', methods=['POST'])
+def predict_home_price():
+    
+    total_sqft = float(request.form['TotalSqft'])
+    location = request.form['Location']
+    bed = int(request.form['Bedroom'])
+    bath = int(request.form['Bathroom'])
+
+    response =  jsonify({
+        #'hi': 'hi'
+        'estimated_price': util.get_estimated_price(location, total_sqft, bed, bath)
+    })
+    response.headers.add('Access-Control-Allow-Origin', '*')
+
+    return response
+
 if __name__ == "__main__":
     print("Starting python flask server")
     app.run()
