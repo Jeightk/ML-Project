@@ -89,6 +89,9 @@ h2 {
 
 .submit{
   background: #a5dc86;
+  border:black;
+  border-style: solid;
+  border-radius: 5;
   width: 76%;
   border: 0;
   margin: 25px 0 10px;
@@ -130,4 +133,5 @@ h2 {
 
 body, html {
   height: 100%;
+  background-color: mediumpurple;
 }
